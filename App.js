@@ -1,9 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import imgLogo from './assets/icon_todo_list.png';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <View>
+        <Image source={imgLogo} />
+      </View>
       <Text>Graziani Zanfolin</Text>
       <StatusBar style="auto" />
     </View>
@@ -17,4 +21,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  logo: {
+    width: 128,
+    height: 128
+  }
 });
