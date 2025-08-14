@@ -1,12 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View } from 'react-native';
-import imgLogo from './assets/icon_todo_list.png';
+import { StatusBar } from "expo-status-bar";
+import { Image, StyleSheet, Text, View } from "react-native";
+import logo from "./assets/icon_todo_list.png";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View>
-        <Image source={imgLogo} />
+        <Image source={logo} style={styles.logo}/>
       </View>
       <Text>Graziani Zanfolin</Text>
       <StatusBar style="auto" />
@@ -17,12 +17,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   logo: {
+    height: 128,
     width: 128,
-    height: 128
-  }
+  },
 });
