@@ -12,18 +12,19 @@ import {
 import logo from "./assets/icon_todo_list.png";
 import { useState } from "react";
 import btnAdd from "./assets/plus.png";
+import { FlashList } from "@shopify/flash-list";
 
 export default function App() {
   const [tarefa, setTarefa] = useState("");
-  const [tarefas, setTarefas] = useState([])
+  const [tarefas, setTarefas] = useState([]);
 
   const handleAdd = () => {
     //Alert.alert(tarefa);
-    setTarefas([tarefa, ...tarefas])
+    setTarefas([tarefa, ...tarefas]);
     setTarefa("");
   };
 
-  //Já importei o Flashlis e agora tem que usar
+  //Já importei o Flashlist e agora tem que usar
 
   return (
     <View style={styles.container}>
@@ -42,7 +43,10 @@ export default function App() {
         </TouchableOpacity>
       </View>
       <View>
-
+        <FlashList
+          data={tarefas}
+          renderItem={({ item }) => <Text>{item}</Text>}
+        />
       </View>
       <StatusBar style="auto" />
     </View>
