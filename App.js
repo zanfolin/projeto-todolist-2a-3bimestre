@@ -74,4 +74,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
   },
+  viewTarefas: {
+    width: "100%",
+    flex: 1
+  }
 });
