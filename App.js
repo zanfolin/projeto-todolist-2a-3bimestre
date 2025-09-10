@@ -25,6 +25,7 @@ export default function App() {
   };
 
   //Já importei o Flashlist e agora tem que usar
+  const renderItem = ({ item }) => <Text>{item}</Text>
 
   return (
     <View style={styles.container}>
@@ -42,10 +43,10 @@ export default function App() {
           <Image source={btnAdd} style={styles.btnAdd} />
         </TouchableOpacity>
       </View>
-      <View>
+      <View style={styles.viewTarefas}>
         <FlashList
           data={tarefas}
-          renderItem={({ item }) => <Text>{item}</Text>}
+          renderItem={renderItem}
         />
       </View>
       <StatusBar style="auto" />
@@ -76,6 +77,6 @@ const styles = StyleSheet.create({
   },
   viewTarefas: {
     width: "100%",
-    flex: 1
-  }
+    flex: 1,
+  },
 });
