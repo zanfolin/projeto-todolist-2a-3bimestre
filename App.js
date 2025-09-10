@@ -25,7 +25,7 @@ export default function App() {
   };
 
   //Já importei o Flashlist e agora tem que usar
-  const renderItem = ({ item }) => <Text>{item}</Text>
+  const renderItem = ({ item }) => <View><Text>{item}</Text></View>
 
   return (
     <View style={styles.container}>
